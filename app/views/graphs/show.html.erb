@@ -1,1 +1,11 @@
 <h1>Values of CryptoCurrencies</h1>
+
+<%= link_to_if(params[:id], params[:id], "https://en.wikipedia.org/wiki/#{params[:id]}") %>
+<br/><br/>
+
+<a class="btn btn-primary" href=<%= graph_path('Bitcoin') %> role="button">Bitcoin</a>
+<a class="btn btn-primary" href=<%= graph_path('Ethereum') %> role="button">Ethereum</a>
+
+<a class="btn btn-primary" href=<%= graph_path('Nasdaq') %> role="button">Nasdaq</a>
+
+
