@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	root "graphs#show"
+	root "currencies#show"
 
-	resources :graphs, only: :show
+	resources :currencies, only: :show
 end
