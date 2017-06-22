@@ -1,9 +1,8 @@
-if Rails.env.development? || Rails.env.test?
   require "factory_girl"
   require "currencies/currency_client"
 
   namespace :dev do
-    desc "Seed all crypto currencies"
+    desc "Insert all crypto currencies in the database"
     task seed: "db:seed" do
       include FactoryGirl::Syntax::Methods
       include CurrencyClient
@@ -42,4 +41,3 @@ if Rails.env.development? || Rails.env.test?
   def print_currency(currency, date, value)
     puts "#{currency}'s value on #{date}: #{value} USD"
   end
-end
