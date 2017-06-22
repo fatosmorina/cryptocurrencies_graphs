@@ -1,3 +1,4 @@
+if Rails.env.development? || Rails.env.test?
   require "factory_girl"
   require "currencies/currency_client"
 
@@ -41,3 +42,4 @@
   def print_currency(currency, date, value)
     puts "#{currency}'s value on #{date}: #{value} USD"
   end
+end

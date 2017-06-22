@@ -1,3 +1,4 @@
+if Rails.env.production?
   require "factory_girl"
   require "currencies/currency_client"
 
@@ -33,3 +34,4 @@
   def print_currency_inserterd(currency, date, value)
     puts "New row added: #{currency}'s value on #{date}: #{value} USD"
   end
+end

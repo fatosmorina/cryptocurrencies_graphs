@@ -21,6 +21,7 @@ gem "suspenders"
 gem "title"
 gem "uglifier"
 gem 'rest-client'
+gem 'whenever', require: false
 
 group :development do
   gem "listen"
