@@ -12,13 +12,13 @@
   %>
   <title><%= title %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
+  <%= render "javascript" %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class %>">
     <div class="container">
       <%= yield %>
     </div>  
-  <%= render "javascript" %>
   <%= render "css_overrides" %>
 </body>
 </html>

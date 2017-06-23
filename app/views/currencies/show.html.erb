@@ -1,15 +1,19 @@
+
 <div class="page-header">
 	<h1>Values of CryptoCurrencies</h1>
 </div>
 <% if params[:id] %>
-		<h3> Graph of <%= link_to("#{params[:id]}", "https://en.wikipedia.org/wiki/#{params[:id]}") %> </h3>
+		<h3> Graph of <%= link_to("#{params[:id]}", "https://en.wikipedia.org/wiki/#{params[:id]}") %>: </h3>
 <% else %>
 		<h3> Choose a currency please: </h3>
 <% end %>
+
+<%= line_chart @currencies %>
 
 <div class="btn-toolbar"> 
 	<a class="btn btn-success" href=<%= currency_path('Bitcoin') %> role="button">Bitcoin</a>
 	<a class="btn btn-success" href=<%= currency_path('Ethereum') %> role="button">Ethereum</a>
 	<a class="btn btn-success" href=<%= currency_path('Nasdaq') %> role="button">Nasdaq</a>
 </div>
+
 
