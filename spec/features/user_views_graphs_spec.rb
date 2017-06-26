@@ -26,6 +26,6 @@ end
 private
 
 def expect_page_to_have_link(currency)
-	visit graph_path("#{currency}")
+	visit currency_path("#{currency}")
   	expect(page).to have_link("#{currency}", :href => "https://en.wikipedia.org/wiki/#{currency}") 
 end
