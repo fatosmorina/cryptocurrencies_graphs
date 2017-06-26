@@ -12,10 +12,10 @@
   %>
   <title><%= title %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
-  <%= render "javascript" %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class %>">
+    <%= render "javascript" %>
     <div class="container">
       <%= yield %>
     </div>  
