@@ -1,4 +1,4 @@
-if Rails.env.production?
+#if Rails.env.production?
   require "currencies/currency_client"
 
   namespace :currency do
@@ -6,9 +6,10 @@ if Rails.env.production?
     task seed: "db:seed" do
       include CurrencyClient
       begin
-          insert_new_recent_rows(CurrencyClient.get_bitcoins, 'bitcoin')
-          insert_new_recent_rows(CurrencyClient.get_ethereums, 'ethereum')
-          insert_new_recent_rows(CurrencyClient.get_nasdaqs, 'nasdaq')
+        
+        ['bitcoin', 'ethereum', 'nasdaq'].each do |currency|
+          insert_new_recent_rows(CurrencyClient.send("get_#{currency}s"), "#{currency}")
+        end
 
       rescue ActiveRecord::StatementInvalid
         # ...which we ignore.
@@ -32,4 +33,4 @@ if Rails.env.production?
   def print_currency_inserterd(currency, date, value)
     puts "New row added: #{currency}'s value on #{date}: #{value} USD"
   end
-end
+#end

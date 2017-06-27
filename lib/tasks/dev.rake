@@ -25,7 +25,7 @@ require "currencies/currency_client"
 
   def insert_currencies(type, currencies)
 	currencies.each do |date, value|
-          ActiveRecord::Base.transaction do
+        ActiveRecord::Base.transaction do
               Currency.create(currency_type: type, date: date, value: value)
               print_currency(type.capitalize, date, value)
           end
