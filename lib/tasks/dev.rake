@@ -5,10 +5,6 @@ require "currencies/currency_client"
     task seed: "db:seed" do
       include CurrencyClient
 
-      unless Rails.env.development?
-        raise "This task can only be run in the development environment"
-      end
-
       begin
       	bitcoins = CurrencyClient.get_bitcoins
       	ethereums = CurrencyClient.get_ethereums
