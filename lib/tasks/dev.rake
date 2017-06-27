@@ -3,7 +3,6 @@ require "currencies/currency_client"
   namespace :dev do
     desc "Insert all crypto currencies in the database"
     task seed: "db:seed" do
-      include FactoryGirl::Syntax::Methods
       include CurrencyClient
 
       unless Rails.env.development?
