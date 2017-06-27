@@ -1,5 +1,4 @@
-if Rails.env.development? || Rails.env.test?
-  require "factory_girl"
+require "factory_girl"
   require "currencies/currency_client"
 
   namespace :dev do
@@ -41,5 +40,4 @@ if Rails.env.development? || Rails.env.test?
 
   def print_currency(currency, date, value)
     puts "#{currency}'s value on #{date}: #{value} USD"
-  end
 end
