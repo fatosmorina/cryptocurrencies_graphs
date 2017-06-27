@@ -11,5 +11,5 @@
 /public/assets
 /tags
 /tmp/*
-config/initializers/load_api_config.rb
-config/api_config.yml
+#config/initializers/load_api_config.rb
+#config/api_config.yml
