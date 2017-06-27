@@ -1,5 +1,4 @@
-require "factory_girl"
-  require "currencies/currency_client"
+require "currencies/currency_client"
 
   namespace :dev do
     desc "Insert all crypto currencies in the database"
@@ -32,7 +31,7 @@ require "factory_girl"
   def insert_currencies(type, currencies)
 	currencies.each do |date, value|
           ActiveRecord::Base.transaction do
-              create(:currency, currency_type: type, date: date, value: value)
+              Currency.create(currency_type: type, date: date, value: value)
               print_currency(type.capitalize, date, value)
           end
       	end	
@@ -40,4 +39,4 @@ require "factory_girl"
 
   def print_currency(currency, date, value)
     puts "#{currency}'s value on #{date}: #{value} USD"
-end
+  end
