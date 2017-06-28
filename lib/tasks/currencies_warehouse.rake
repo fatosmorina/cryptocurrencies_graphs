@@ -1,4 +1,4 @@
-#if Rails.env.production?
+if Rails.env.production?
   require "currencies/currency_client"
 
   namespace :currency do
@@ -33,4 +33,4 @@
   def print_currency_inserterd(currency, date, value)
     puts "New row added: #{currency}'s value on #{date}: #{value} USD"
   end
-#end
+end
