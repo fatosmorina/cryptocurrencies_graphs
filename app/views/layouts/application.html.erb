@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="ROBOTS" content="NOODP" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
-  <%#
-    Configure default and controller-, and view-specific titles in
+  <head>
+    <meta charset="utf-8" />
+    <meta name="ROBOTS" content="NOODP" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <%#
+        Configure default and controller-, and view-specific titles in
     config/locales/en.yml. For more see:
-    https://github.com/calebthompson/title#usage
-  %>
+      https://github.com/calebthompson/title#usage
+    %>
   <title><%= title %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
-</head>
-<body class="<%= body_class %> jumbotron vertical-center">
+  </head>
+  <body class="<%= body_class %> jumbotron vertical-center">
     <%= render "javascript" %>
     <div class="container">
       <%= yield %>
     </div>  
-  <%= render "css_overrides" %>
-</body>
+    <%= render "css_overrides" %>
+  </body>
 </html>
