@@ -9,7 +9,7 @@ feature "User views graph links" do
   end  
 end  
 
-feature "User views CryptoCurrency links of" do 
+feature "User views Wikipedia page of" do 
   scenario "Bitcoin" do
     expect_page_to_have_link("Bitcoin")
   end
