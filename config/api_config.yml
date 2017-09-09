@@ -3,12 +3,12 @@ production:
   ethereum_api_url: "https://min-api.cryptocompare.com/data/histoday?fsym=ETH&tsym=USD&limit=60&aggregate=1&e=CCCAGG"
   nasdaq_api_url: "https://fred.stlouisfed.org/graph/graph-data.php?recession_bars=on&mode=fred&id=NASDAQCOM&fq=Daily&fam=avg&transformation=lin&nd=1971-02-05&ost=-99999&oet=99999&lsv=&lev=&fml=a&fgst=lin&fgsnd=2009-06-01&mma=0&scale=left&line_color=%234572a7&line_style=solid&vintage_date=&revision_date=&chart_type=line&stacking=&drp=0&cosd=&coed=&log_scales="
 
-  development:
+development:
     bitcoin_api_url: "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=60&aggregate=1&e=CCCAGG"
     ethereum_api_url: "https://min-api.cryptocompare.com/data/histoday?fsym=ETH&tsym=USD&limit=60&aggregate=1&e=CCCAGG"
     nasdaq_api_url: "https://fred.stlouisfed.org/graph/graph-data.php?recession_bars=on&mode=fred&id=NASDAQCOM&fq=Daily&fam=avg&transformation=lin&nd=1971-02-05&ost=-99999&oet=99999&lsv=&lev=&fml=a&fgst=lin&fgsnd=2009-06-01&mma=0&scale=left&line_color=%234572a7&line_style=solid&vintage_date=&revision_date=&chart_type=line&stacking=&drp=0&cosd=&coed=&log_scales="
 
-    test:
+test:
       bitcoin_api_url: "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=60&aggregate=1&e=CCCAGG"
       ethereum_api_url: "https://min-api.cryptocompare.com/data/histoday?fsym=ETH&tsym=USD&limit=60&aggregate=1&e=CCCAGG"
       nasdaq_api_url: "https://fred.stlouisfed.org/graph/graph-data.php?recession_bars=on&mode=fred&id=NASDAQCOM&fq=Daily&fam=avg&transformation=lin&nd=1971-02-05&ost=-99999&oet=99999&lsv=&lev=&fml=a&fgst=lin&fgsnd=2009-06-01&mma=0&scale=left&line_color=%234572a7&line_style=solid&vintage_date=&revision_date=&chart_type=line&stacking=&drp=0&cosd=&coed=&log_scales="
